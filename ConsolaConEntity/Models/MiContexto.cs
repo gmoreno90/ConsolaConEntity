@@ -22,17 +22,17 @@ namespace ConsolaConEntity.Models
         public virtual DbSet<Cosa> Cosas { get; set; }
     }
 
-    /// <summary>
-    /// Añadimos esta mierda para poderlo poner en el Add-Migration InitialCreate por consola
-    /// </summary>
-    public class MiContextoFactory : IDesignTimeDbContextFactory<MiContexto>
-    {
-        public MiContexto CreateDbContext(string[] args)
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<MiContexto>();
-            optionsBuilder.UseSqlite("Data Source=blog.db");
+    ///// <summary>
+    ///// Añadimos esta mierda para poderlo poner en el Add-Migration InitialCreate por consola
+    ///// </summary>
+    //public class MiContextoFactory : IDesignTimeDbContextFactory<MiContexto>
+    //{
+    //    public MiContexto CreateDbContext(string[] args)
+    //    {
+    //        var optionsBuilder = new DbContextOptionsBuilder<MiContexto>();
+    //        optionsBuilder.UseSqlite("Data Source=blog.db");
 
-            return new MiContexto(optionsBuilder.Options);
-        }
-    }
+    //        return new MiContexto(optionsBuilder.Options);
+    //    }
+    //}
 }
